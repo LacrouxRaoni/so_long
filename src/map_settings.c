@@ -6,13 +6,12 @@
 /*   By: rruiz-la <rruiz-la@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/22 17:49:40 by rruiz-la          #+#    #+#             */
-/*   Updated: 2022/01/22 15:34:53 by rruiz-la         ###   ########.fr       */
+/*   Updated: 2022/01/25 10:58:34 by rruiz-la         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
 
-//check character numbers in map
 int	check_map_obj(t_game *game)
 {
 	int	i;
@@ -39,7 +38,6 @@ int	check_map_obj(t_game *game)
 	return (0);
 }
 
-//check if the map have the chars requesteded
 int	check_map_chars(t_game *game)
 {
 	int	i;
@@ -62,7 +60,6 @@ int	check_map_chars(t_game *game)
 	return (0);
 }
 
-//check if map area is filled with '1'
 int	check_map_walls(t_game *game)
 {
 	int	i;
