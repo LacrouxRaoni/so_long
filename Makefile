@@ -6,7 +6,7 @@
 #    By: rruiz-la <rruiz-la@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/22 15:02:38 by rruiz-la          #+#    #+#              #
-#    Updated: 2022/01/25 19:11:37 by rruiz-la         ###   ########.fr        #
+#    Updated: 2022/01/25 20:39:46 by rruiz-la         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,7 +21,7 @@ MLX 		=	$(PATH_MLX)/libmlx.a
 I_OBJ	=	-I ./ -I ./lib/minilibx/ -I ./lib/libft/
 LINKS	=	-I ./ -I ./lib/minilibx/ -L./lib/minilibx/ -lmlx -I ./lib/libft/ -L./lib/libft/ -lft
 
-CC	=	clang
+CC	=	gcc
 CFLAGS	=	-Wall -Wextra -Werror
 MLXFLAG	= -L. -lXext -L. -lX11 -L. -lm
 
