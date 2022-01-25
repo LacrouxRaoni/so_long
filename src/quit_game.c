@@ -6,7 +6,7 @@
 /*   By: rruiz-la <rruiz-la@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/20 17:43:06 by rruiz-la          #+#    #+#             */
-/*   Updated: 2021/11/23 12:20:10 by rruiz-la         ###   ########.fr       */
+/*   Updated: 2022/01/25 17:51:55 by rruiz-la         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ void	free_map(char **map)
 int	close_display(t_game *game)
 {
 	mlx_destroy_image(game->mlx_ptr, game->hero_img);
+	mlx_destroy_image(game->mlx_ptr, game->hero_l_img);
 	mlx_destroy_image(game->mlx_ptr, game->collectible_img);
 	mlx_destroy_image(game->mlx_ptr, game->wall_img);
 	mlx_destroy_image(game->mlx_ptr, game->grass_img);

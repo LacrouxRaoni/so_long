@@ -6,7 +6,7 @@
 /*   By: rruiz-la <rruiz-la@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/20 17:42:18 by rruiz-la          #+#    #+#             */
-/*   Updated: 2022/01/21 22:45:18 by rruiz-la         ###   ########.fr       */
+/*   Updated: 2022/01/25 20:27:15 by rruiz-la         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ void	arrange_map_pt2(t_game *game, int i)
 	}
 }
 
-void	arrange_map(t_game *game)
+int	arrange_map(t_game *game)
 {
 	int	i;
 
@@ -63,4 +63,5 @@ void	arrange_map(t_game *game)
 		arrange_map_pt2(game, i);
 		i++;
 	}
+	return (0);
 }

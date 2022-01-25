@@ -6,7 +6,7 @@
 /*   By: rruiz-la <rruiz-la@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/20 18:55:11 by rruiz-la          #+#    #+#             */
-/*   Updated: 2022/01/25 11:06:05 by rruiz-la         ###   ########.fr       */
+/*   Updated: 2022/01/25 19:45:09 by rruiz-la         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,7 +73,7 @@ void	move_player_right(t_game *game);
 void	player_direction(t_game *game, int i, int j);
 void	manage_display(t_game *game);
 void	arrange_x(t_game *game);
-void	arrange_map(t_game *game);
+int		arrange_map(t_game *game);
 void	arrange_map_pt2(t_game *game, int i);
 void	find_p_in_map(int *i, int *j, t_game *game);
 char	**fullfil_matrix(char *file_name, t_game game);

@@ -6,7 +6,7 @@
 /*   By: rruiz-la <rruiz-la@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/22 17:49:40 by rruiz-la          #+#    #+#             */
-/*   Updated: 2022/01/25 10:58:34 by rruiz-la         ###   ########.fr       */
+/*   Updated: 2022/01/25 20:26:37 by rruiz-la         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -106,6 +106,7 @@ int	map_settings(t_game *game)
 	game->count_p = 0;
 	game->height = 0;
 	game->width = ft_strlen(game->map[0]);
+	game->boolean_player = 0;
 	while (game->map[game->height])
 		game->height++;
 	return_i = check_map_chars(game);
