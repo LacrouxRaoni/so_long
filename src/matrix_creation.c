@@ -6,7 +6,7 @@
 /*   By: rruiz-la <rruiz-la@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/22 20:02:18 by rruiz-la          #+#    #+#             */
-/*   Updated: 2022/01/25 21:18:32 by rruiz-la         ###   ########.fr       */
+/*   Updated: 2022/01/26 17:31:12 by rruiz-la         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,15 @@
 static int	validate_break_line(char *tmp)
 {
 	int	i;
+	int	count;
 
 	i = -1;
+	count = 0;
 	while (tmp[++i])
 	{
 		if (tmp[i] == '\n')
 		{
-			if (tmp[i + 1] == '\n')
+			if (tmp[i + 1] == '\n' && tmp[i + 2] == '1')
 			{
 				free (tmp);
 				return (1);
