@@ -6,7 +6,7 @@
 /*   By: rruiz-la <rruiz-la@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/20 18:51:27 by rruiz-la          #+#    #+#             */
-/*   Updated: 2021/11/23 18:45:41 by rruiz-la         ###   ########.fr       */
+/*   Updated: 2022/01/25 21:11:49 by rruiz-la         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ int	main(int argc, char **argv)
 		game.map = fullfil_matrix(argv[1], game);
 		if (game.map == NULL)
 		{
-			printf ("Error\nInvaalid map.\n");
+			printf ("Error\nInvalid map.\n");
 			exit (1);
 		}
 		if (map_settings(&game) == 0)

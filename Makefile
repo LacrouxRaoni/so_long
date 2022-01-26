@@ -6,7 +6,7 @@
 #    By: rruiz-la <rruiz-la@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/22 15:02:38 by rruiz-la          #+#    #+#              #
-#    Updated: 2022/01/25 20:39:46 by rruiz-la         ###   ########.fr        #
+#    Updated: 2022/01/25 21:12:40 by rruiz-la         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,7 +21,7 @@ MLX 		=	$(PATH_MLX)/libmlx.a
 I_OBJ	=	-I ./ -I ./lib/minilibx/ -I ./lib/libft/
 LINKS	=	-I ./ -I ./lib/minilibx/ -L./lib/minilibx/ -lmlx -I ./lib/libft/ -L./lib/libft/ -lft
 
-CC	=	gcc
+CC	=	clang
 CFLAGS	=	-Wall -Wextra -Werror
 MLXFLAG	= -L. -lXext -L. -lX11 -L. -lm
 
@@ -49,7 +49,7 @@ FS	=	-g3
 all:	$(NAME)
 
 $(NAME):	 $(LIBFT) $(MLX) $(OBJ_DIR) $(OBJ) $(HEADER)
-	$(CC) $(FS) $(CFLAGS) $(FS) $(OBJ) $(MLXFLAG) $(LINKS) -o $(NAME)
+	$(CC) $(CFLAGS) $(FS) $(OBJ) $(MLXFLAG) $(LINKS) -o $(NAME)
 
 $(OBJ_DIR)/%.o:	$(SRC_DIR)/%.c $(HEADER)
 	$(CC) $(CFLAGS) -c $< -o $@ $(I_OBJ)
@@ -77,6 +77,6 @@ fclean:
 re: fclean all
 
 valgrind: $(NAME)
-	valgrind --leak-check=full --show-leak-kinds=all ./so_long map/map.ber
+	valgrind --leak-check=full --show-leak-kinds=all ./so_long maps/map.ber
 
 .PHONY:	all clean fclean re valgrind
