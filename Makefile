@@ -6,7 +6,7 @@
 #    By: rruiz-la <rruiz-la@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/22 15:02:38 by rruiz-la          #+#    #+#              #
-#    Updated: 2022/01/25 21:12:40 by rruiz-la         ###   ########.fr        #
+#    Updated: 2022/01/26 00:12:42 by rruiz-la         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,6 +29,7 @@ SRC_DIR =	src
 SRC_FILES	=	so_long.c \
 				move_player.c \
 				key_events.c \
+				file_extension.c \
 				map_settings.c \
 				quit_game.c \
 				arrange_map.c \

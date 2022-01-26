@@ -6,7 +6,7 @@
 /*   By: rruiz-la <rruiz-la@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/20 18:55:11 by rruiz-la          #+#    #+#             */
-/*   Updated: 2022/01/25 19:45:09 by rruiz-la         ###   ########.fr       */
+/*   Updated: 2022/01/26 00:09:19 by rruiz-la         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,6 +65,7 @@ int		check_map_chars(t_game *game);
 	*to check if map area is filled with '1'
 **/
 int		check_map_walls(t_game *game);
+int		check_map_size(t_game *game);
 int		key_received(int key, t_game *game);
 void	move_player_up(t_game *game);
 void	move_player_down(t_game *game);

@@ -6,7 +6,7 @@
 /*   By: rruiz-la <rruiz-la@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/22 17:49:40 by rruiz-la          #+#    #+#             */
-/*   Updated: 2022/01/25 20:26:37 by rruiz-la         ###   ########.fr       */
+/*   Updated: 2022/01/26 00:15:03 by rruiz-la         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,18 +81,22 @@ int	check_map_walls(t_game *game)
 	return (0);
 }
 
-int	file_extension_validation(char *file)
+int	check_map_size(t_game *game)
 {
-	char	*ext;
+	int	i;
+	int	size;
 
-	if (!file)
-		return (1);
-	ext = ft_strrchr(file, '.');
-	if (!ext)
-		return (1);
-	if (ft_strncmp(ext, ".ber", 5) == 0)
-		return (0);
-	return (1);
+	i = 0;
+	while (game->map[i] != NULL)
+	{
+		size = 0;
+		size = ft_strlen(game->map[i]);
+		if (size == game->width)
+			i++;
+		else
+			return (1);
+	}
+	return (0);
 }
 
 int	map_settings(t_game *game)
@@ -100,19 +104,21 @@ int	map_settings(t_game *game)
 	int	return_i;
 	int	return_j;
 	int	return_k;
+	int	return_l;
 
 	game->count_e = 0;
 	game->count_c = 0;
 	game->count_p = 0;
 	game->height = 0;
 	game->width = ft_strlen(game->map[0]);
-	game->boolean_player = 0;
 	while (game->map[game->height])
 		game->height++;
+	game->boolean_player = 0;
 	return_i = check_map_chars(game);
 	return_j = check_map_obj(game);
 	return_k = check_map_walls(game);
-	if (return_i == 0 && return_j == 0 && return_k == 0)
+	return_l = check_map_size(game);
+	if (return_i == 0 && return_j == 0 && return_k == 0 && return_l == 0)
 	{
 		game->count_moves = 0;
 		game->points = game->count_c;
