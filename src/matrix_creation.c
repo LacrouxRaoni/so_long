@@ -6,7 +6,7 @@
 /*   By: rruiz-la <rruiz-la@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/22 20:02:18 by rruiz-la          #+#    #+#             */
-/*   Updated: 2022/01/25 20:22:26 by rruiz-la         ###   ########.fr       */
+/*   Updated: 2022/01/25 21:18:32 by rruiz-la         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,10 @@ static int	validate_break_line(char *tmp)
 		if (tmp[i] == '\n')
 		{
 			if (tmp[i + 1] == '\n')
+			{
+				free (tmp);
 				return (1);
+			}
 		}
 	}
 	return (0);
