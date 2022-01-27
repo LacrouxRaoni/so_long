@@ -6,7 +6,7 @@
 /*   By: coder <coder@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/22 20:02:18 by rruiz-la          #+#    #+#             */
-/*   Updated: 2022/01/27 03:08:47 by coder            ###   ########.fr       */
+/*   Updated: 2022/01/28 00:03:29 by coder            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,11 @@ static int	validate_break_line(char *tmp)
 {
 	int	i;
 
+	if (tmp[0] == '\n')
+	{
+		free (tmp);
+		return (1);	
+	}
 	i = -1;
 	while (tmp[++i])
 	{
